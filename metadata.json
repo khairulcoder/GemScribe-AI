@@ -1,0 +1,5 @@
+{
+  "name": "GemScribe AI",
+  "description": "A specialized AI tool for e-commerce fashion and jewelry brands to generate high-quality, SEO-friendly, and culturally-aware product content like reviews, descriptions, and social media posts using the Google Gemini API.",
+  "requestFramePermissions": []
+}
