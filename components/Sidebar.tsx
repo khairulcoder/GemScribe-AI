@@ -3,9 +3,10 @@ import { SunIcon } from './icons/SunIcon';
 import { MoonIcon } from './icons/MoonIcon';
 import { SparklesIcon } from './icons/SparklesIcon';
 import { HistoryIcon } from './icons/HistoryIcon';
+import { PencilIcon } from './icons/PencilIcon';
 
 type Theme = 'light' | 'dark';
-type View = 'generator' | 'project';
+type View = 'generator' | 'project' | 'improver';
 
 interface SidebarProps {
   theme: Theme;
@@ -29,6 +30,9 @@ export const Sidebar: React.FC<SidebarProps> = ({
       <nav className="p-4 space-y-2 flex-grow">
          <button onClick={() => setView('generator')} className={`w-full flex items-center px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 transform hover:translate-x-1 ${view === 'generator' ? 'bg-primary-light dark:bg-primary-dark text-white shadow-md' : 'text-text-primary-light dark:text-text-primary-dark hover:bg-gray-200 dark:hover:bg-gray-700'}`}>
             <SparklesIcon className="w-5 h-5 mr-3"/> Generator
+         </button>
+          <button onClick={() => setView('improver')} className={`w-full flex items-center px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 transform hover:translate-x-1 ${view === 'improver' ? 'bg-primary-light dark:bg-primary-dark text-white shadow-md' : 'text-text-primary-light dark:text-text-primary-dark hover:bg-gray-200 dark:hover:bg-gray-700'}`}>
+            <PencilIcon className="w-5 h-5 mr-3"/> Content Improver
          </button>
          <button onClick={() => setView('project')} className={`w-full flex items-center px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 transform hover:translate-x-1 ${view === 'project' ? 'bg-primary-light dark:bg-primary-dark text-white shadow-md' : 'text-text-primary-light dark:text-text-primary-dark hover:bg-gray-200 dark:hover:bg-gray-700'}`}>
             <HistoryIcon className="w-5 h-5 mr-3"/> Project History

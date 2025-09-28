@@ -203,3 +203,69 @@ export const regenerateContentChunk = async (
     throw new Error("An unknown error occurred while regenerating content.");
   }
 };
+
+/**
+ * Improves existing content based on a specified action.
+ * @param originalText - The text to improve.
+ * @param improvementAction - The action to perform (e.g., "Improve SEO").
+ * @param tone - Optional. The target tone if the action is "Change Tone".
+ * @param onChunk - Callback for streaming results.
+ * @returns A promise that resolves to the complete improved content string.
+ */
+export const streamImprovedContent = async (
+  originalText: string,
+  improvementAction: string,
+  tone: string | undefined,
+  onChunk: (chunk: string) => void
+): Promise<string> => {
+  try {
+    const model = 'gemini-2.5-flash';
+    
+    let prompt = `
+You are an expert, world-class copy editor. Your task is to improve the provided text based on the user's request.
+
+**CRITICAL INSTRUCTION:** Your final output should ONLY be the improved text itself. Do not add any conversational filler, preambles, or explanations like "Here is the improved version:".
+
+---
+**IMPROVEMENT TASK**
+---
+**Action:** ${improvementAction}
+`;
+
+    if (improvementAction === 'Change Tone' && tone) {
+      prompt += `**New Tone:** ${tone}\n`;
+    }
+
+    prompt += `
+---
+**ORIGINAL TEXT**
+---
+${originalText}
+
+---
+**IMPROVED TEXT (Your Output):**
+---
+`;
+
+    const responseStream = await ai.models.generateContentStream({
+      model: model,
+      contents: prompt,
+    });
+
+    let fullContent = '';
+    for await (const chunk of responseStream) {
+      const text = chunk.text;
+      if (text) {
+        fullContent += text;
+        onChunk(text);
+      }
+    }
+    return fullContent;
+  } catch (error) {
+    console.error("Error improving content:", error);
+    if (error instanceof Error) {
+      throw new Error(`Failed to improve content: ${error.message}`);
+    }
+    throw new Error("An unknown error occurred while improving content.");
+  }
+};

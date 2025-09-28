@@ -5,9 +5,10 @@ import { Sidebar } from './components/Sidebar';
 import { ContentGeneratorView } from './components/ContentGeneratorView';
 import { ProjectView } from './components/ProjectView';
 import { NewsletterModal } from './components/NewsletterModal';
+import { ContentImproverView } from './components/ContentImproverView';
 
 type Theme = 'light' | 'dark';
-type View = 'generator' | 'project';
+type View = 'generator' | 'project' | 'improver';
 
 const SINGLE_PROJECT_ID = 'default_project';
 
@@ -113,6 +114,9 @@ export function App() {
             clearActiveHistoryItem={clearActiveHistoryItem}
             incrementGenerationCount={incrementGenerationCount}
           />
+        )}
+         {view === 'improver' && (
+          <ContentImproverView />
         )}
         {view === 'project' && (
           <ProjectView

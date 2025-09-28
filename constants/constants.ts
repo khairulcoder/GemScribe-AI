@@ -43,3 +43,13 @@ export const OCCASIONS = [
   "Summer Vacation",
   "Back to School",
 ];
+
+export const IMPROVEMENT_ACTIONS = [
+    "Improve SEO",
+    "Change Tone",
+    "Shorten",
+    "Lengthen",
+    "Fix Grammar & Spelling",
+    "Make more professional",
+    "Make more casual",
+];
