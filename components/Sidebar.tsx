@@ -1,9 +1,9 @@
 import React from 'react';
-import { SunIcon } from './icons/SunIcon';
-import { MoonIcon } from './icons/MoonIcon';
-import { SparklesIcon } from './icons/SparklesIcon';
-import { HistoryIcon } from './icons/HistoryIcon';
-import { PencilIcon } from './icons/PencilIcon';
+import { SunIcon } from './icons/SunIcon.tsx';
+import { MoonIcon } from './icons/MoonIcon.tsx';
+import { SparklesIcon } from './icons/SparklesIcon.tsx';
+import { HistoryIcon } from './icons/HistoryIcon.tsx';
+import { PencilIcon } from './icons/PencilIcon.tsx';
 
 type Theme = 'light' | 'dark';
 type View = 'generator' | 'project' | 'improver';

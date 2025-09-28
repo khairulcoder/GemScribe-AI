@@ -1,5 +1,5 @@
 
-import type { Template } from '../types';
+import type { Template } from '../types.ts';
 
 export const TEMPLATES: Template[] = [
   {

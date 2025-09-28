@@ -1,8 +1,8 @@
 import React, { useState, useMemo } from 'react';
-import type { HistoryItem } from '../types';
-import { HistoryItemCard } from './HistoryItemCard';
-import { HistoryIcon } from './icons/HistoryIcon';
-import { TrashIcon } from './icons/TrashIcon';
+import type { HistoryItem } from '../types.ts';
+import { HistoryItemCard } from './HistoryItemCard.tsx';
+import { HistoryIcon } from './icons/HistoryIcon.tsx';
+import { TrashIcon } from './icons/TrashIcon.tsx';
 
 interface ProjectViewProps {
     history: HistoryItem[];

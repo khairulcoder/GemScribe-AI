@@ -1,5 +1,5 @@
 import { GoogleGenAI } from "@google/genai";
-import type { ContentGenerationParams, GeneratedContentChunk } from '../types';
+import type { ContentGenerationParams, GeneratedContentChunk } from '../types.ts';
 
 // Initialization according to guidelines
 const ai = new GoogleGenAI({ apiKey: process.env.API_KEY! });
@@ -66,7 +66,7 @@ You are an expert, world-class e-commerce copywriter for fashion and jewelry bra
       break;
 
     case 'Email Campaign':
-      basePrompt += `**Task:** Write copy for an email campaign. It MUST include an attention-grabbing subject line and a clear call-to-action (CTA) button text.${seoDirective} The email body should expand on this hook. Format it like:\n### Subject: [Your Subject Here]\n\n[Email body here]\n\n### CTA Button: [Your CTA Text Here]`;
+      basePrompt += `**Task:** Write copy for an email campaign. It MUST include an attention-grabbing subject line and a clear call to-action (CTA) button text.${seoDirective} The email body should expand on this hook. Format it like:\n### Subject: [Your Subject Here]\n\n[Email body here]\n\n### CTA Button: [Your CTA Text Here]`;
       break;
 
     case 'Blog Post Intro':

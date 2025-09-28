@@ -1,11 +1,11 @@
 
 import React, { useState, useEffect } from 'react';
-import type { ContentGenerationParams, Template } from '../types';
-import { CONTENT_TYPES, TONES, COUNTRIES, STAR_RATINGS, OCCASIONS, CONTENT_LENGTHS } from '../constants/constants';
-import { TEMPLATES } from '../constants/templates';
-import { Selector } from './Selector';
-import { Toggle } from './Toggle';
-import { SparklesIcon } from './icons/SparklesIcon';
+import type { ContentGenerationParams, Template } from '../types.ts';
+import { CONTENT_TYPES, TONES, COUNTRIES, STAR_RATINGS, OCCASIONS, CONTENT_LENGTHS } from '../constants/constants.ts';
+import { TEMPLATES } from '../constants/templates.ts';
+import { Selector } from './Selector.tsx';
+import { Toggle } from './Toggle.tsx';
+import { SparklesIcon } from './icons/SparklesIcon.tsx';
 
 interface ContentFormProps {
   onSubmit: (params: ContentGenerationParams) => void;

@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import useLocalStorage from './hooks/useLocalStorage';
-import type { HistoryItem } from './types';
-import { Sidebar } from './components/Sidebar';
-import { ContentGeneratorView } from './components/ContentGeneratorView';
-import { ProjectView } from './components/ProjectView';
-import { NewsletterModal } from './components/NewsletterModal';
-import { ContentImproverView } from './components/ContentImproverView';
+import useLocalStorage from './hooks/useLocalStorage.ts';
+import type { HistoryItem } from './types.ts';
+import { Sidebar } from './components/Sidebar.tsx';
+import { ContentGeneratorView } from './components/ContentGeneratorView.tsx';
+import { ProjectView } from './components/ProjectView.tsx';
+import { NewsletterModal } from './components/NewsletterModal.tsx';
+import { ContentImproverView } from './components/ContentImproverView.tsx';
 
 type Theme = 'light' | 'dark';
 type View = 'generator' | 'project' | 'improver';

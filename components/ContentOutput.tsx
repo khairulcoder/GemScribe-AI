@@ -1,15 +1,15 @@
 
 import React, { useState, useEffect, useMemo, useCallback, useRef } from 'react';
-import { Loader } from './Loader';
-import { ErrorMessage } from './ErrorMessage';
-import { ContentCard } from './ContentCard';
-import type { GeneratedContentChunk, ContentGenerationParams } from '../types';
-import { regenerateContentChunk } from '../services/geminiService';
-import { RefreshCwIcon } from './icons/RefreshCwIcon';
-import { ClipboardIcon } from './icons/ClipboardIcon';
-import { CheckIcon } from './icons/CheckIcon';
-import { SparklesIcon } from './icons/SparklesIcon';
-import { DownloadIcon } from './icons/DownloadIcon';
+import { Loader } from './Loader.tsx';
+import { ErrorMessage } from './ErrorMessage.tsx';
+import { ContentCard } from './ContentCard.tsx';
+import type { GeneratedContentChunk, ContentGenerationParams } from '../types.ts';
+import { regenerateContentChunk } from '../services/geminiService.ts';
+import { RefreshCwIcon } from './icons/RefreshCwIcon.tsx';
+import { ClipboardIcon } from './icons/ClipboardIcon.tsx';
+import { CheckIcon } from './icons/CheckIcon.tsx';
+import { SparklesIcon } from './icons/SparklesIcon.tsx';
+import { DownloadIcon } from './icons/DownloadIcon.tsx';
 
 interface ContentOutputProps {
     rawContent: string | null;

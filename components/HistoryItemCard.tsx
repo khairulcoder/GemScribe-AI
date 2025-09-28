@@ -1,7 +1,7 @@
 
 import React from 'react';
-import type { HistoryItem } from '../types';
-import { HistoryIcon } from './icons/HistoryIcon';
+import type { HistoryItem } from '../types.ts';
+import { HistoryIcon } from './icons/HistoryIcon.tsx';
 
 interface HistoryItemCardProps {
     item: HistoryItem;

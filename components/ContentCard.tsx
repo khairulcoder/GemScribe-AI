@@ -1,10 +1,10 @@
 
 import React, { useState, useEffect, useRef } from 'react';
-import type { GeneratedContentChunk } from '../types';
-import { ClipboardIcon } from './icons/ClipboardIcon';
-import { CheckIcon } from './icons/CheckIcon';
-import { TrashIcon } from './icons/TrashIcon';
-import { RefreshCwIcon } from './icons/RefreshCwIcon';
+import type { GeneratedContentChunk } from '../types.ts';
+import { ClipboardIcon } from './icons/ClipboardIcon.tsx';
+import { CheckIcon } from './icons/CheckIcon.tsx';
+import { TrashIcon } from './icons/TrashIcon.tsx';
+import { RefreshCwIcon } from './icons/RefreshCwIcon.tsx';
 
 // Debounce hook to delay function execution
 function useDebounce<T>(value: T, delay: number): T {

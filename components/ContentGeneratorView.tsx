@@ -1,8 +1,8 @@
 import React, { useState, useCallback, useEffect } from 'react';
-import { ContentForm } from './ContentForm';
-import { ContentOutput } from './ContentOutput';
-import type { ContentGenerationParams, HistoryItem } from '../types';
-import { streamGeneratedContent } from '../services/geminiService';
+import { ContentForm } from './ContentForm.tsx';
+import { ContentOutput } from './ContentOutput.tsx';
+import type { ContentGenerationParams, HistoryItem } from '../types.ts';
+import { streamGeneratedContent } from '../services/geminiService.ts';
 
 interface ContentGeneratorViewProps {
   onSaveHistory: (item: Omit<HistoryItem, 'id' | 'createdAt' | 'projectId'>) => void;

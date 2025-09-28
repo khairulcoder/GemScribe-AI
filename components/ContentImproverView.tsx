@@ -1,13 +1,13 @@
 
 import React, { useState, useCallback } from 'react';
-import { streamImprovedContent } from '../services/geminiService';
-import { Selector } from './Selector';
-import { Loader } from './Loader';
-import { ErrorMessage } from './ErrorMessage';
-import { TONES, IMPROVEMENT_ACTIONS } from '../constants/constants';
-import { SparklesIcon } from './icons/SparklesIcon';
-import { ClipboardIcon } from './icons/ClipboardIcon';
-import { CheckIcon } from './icons/CheckIcon';
+import { streamImprovedContent } from '../services/geminiService.ts';
+import { Selector } from './Selector.tsx';
+import { Loader } from './Loader.tsx';
+import { ErrorMessage } from './ErrorMessage.tsx';
+import { TONES, IMPROVEMENT_ACTIONS } from '../constants/constants.ts';
+import { SparklesIcon } from './icons/SparklesIcon.tsx';
+import { ClipboardIcon } from './icons/ClipboardIcon.tsx';
+import { CheckIcon } from './icons/CheckIcon.tsx';
 
 export const ContentImproverView: React.FC = () => {
     const [originalText, setOriginalText] = useState('');

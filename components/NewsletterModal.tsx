@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Loader } from './Loader';
-import { CheckIcon } from './icons/CheckIcon';
+import { Loader } from './Loader.tsx';
+import { CheckIcon } from './icons/CheckIcon.tsx';
 
 interface NewsletterModalProps {
   isOpen: boolean;
