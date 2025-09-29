@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <!-- Removed link to non-existent vite.svg to prevent 404 error -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GemScribe AI</title>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -49,7 +49,7 @@
 </head>
 <body class="bg-background-light dark:bg-background-dark">
     <div id="root"></div>
-    <!-- Update script type to be handled by Babel -->
-    <script type="text/babel" data-type="module" src="/index.tsx"></script>
+    <!-- Update script type to be handled by Babel, using a relative path -->
+    <script type="text/babel" data-type="module" src="./index.tsx"></script>
 </body>
 </html>
